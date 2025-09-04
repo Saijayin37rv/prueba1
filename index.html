@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CENTRO REHABILITACION</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <p class="logo">SEMBRANDO FE</p>
+            <nav>
+                <a href="#somos-proya">Quienes Somos</a>
+                <a href="#nuestros-programas">Videos</a>
+                <a href="#caracteristicas">Contactanos</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <h1>CENTRO REHABILITACION<br>SEMBRANDO FE</h1>
+        <button onclick="location.href='https://www.facebook.com/sembrando.fe.2025'">APLICATE AQUI</button>
+    </section>
+
+    <section id="somos-proya">
+        <div class="container">
+            <div class="img-container">
+                <img id="carousel-img" src="media/michelle1.jpg" alt="Foto 1" style="width:100%; height:350px; object-fit:cover; border-radius:10px;">
+                <button class="carousel-btn" onclick="prevImg()" style="position:absolute; left:10px; top:50%; transform:translateY(-50%);">⟨</button>
+                <button class="carousel-btn" onclick="nextImg()" style="position:absolute; right:10px; top:50%; transform:translateY(-50%);">⟩</button>
+            </div>
+            <div class="texto">
+                <h2>Somos <span class="color-acento">SEMBRANDO FE</span></h2>
+                <p>CLINICA ESPECIALIZADA EN ADICCIONES Sembrando FE  TRANSFORMADOS POR CRISTO </p>
+                <li>AREA TOTALMENTE CLIMATIZADAS</li>
+                <li>TERAPIA ESPIRITUAL </li>
+                <li>TERAPIA PSICOLÓGICA </li>
+                <li>TALLER BIBLICO</li>
+                <li>TERAPIA FAMILIAR</li>
+                <li>JUNTAS DE ESTUDIO</li>
+                <li>ATENCION MEDICA</li>
+                <li>CONSEJERIA EN ADICCIONES</li>
+                <li>PREVENCION SOBRE RECAÍDAS</li>
+                <li>TERAPIA NARCÓTICOS ANÓNIMOS</li>
+                <li>PLAN DE TRABAJO </li>
+                <p>COMUNICATE CON NOSOTROS Sembrando FE  TU PUEDES SALVARLE LA VIDA A TU SER QUERIDO.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="nuestros-programas">
+        <div class="container">
+            <h2>VIDEOS</h2>
+            <div class="programas">
+                <div class="carta">
+                    <video src="media/video1.mp4" 
+                        onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;" width="100%" height="100"></video>
+                </div>
+                <div class="carta">
+                    <video src="media/video2.mp4" 
+                        onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;" width="100%" height="100"></video>
+                </div>
+                <div class="carta">
+                    <video src="media/video3.mp4" 
+                        onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;" width="100%" height="100"></video>
+                </div>  
+                <div class="carta">
+                    <video src="media/video4.mp4" 
+                        onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;" width="100%" height="100"></video>
+            </div>
+        </div>
+    </section>
+
+    <section id="caracteristicas">
+        <div class="container">
+    <h2>Contactanos</h2>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/sembrando.fe.2025" target="_blank">
+        <img src="media/logo_facebook.jpg" alt="Facebook">
+      </a>
+      <a href="https://wa.me/5218135803517" target="_blank">
+        <img src="media/whatsapp_logo.png" alt="Whatsapp">
+      </a>
+      <a href="https://www.tiktok.com/@sembrando.fe3?_t=ZS-8zRCyrPAxlQ&_r=1" target="_blank">
+        <img src="media/tiktok_logo.png" alt="Tiktok">
+      </a>
+    </div>
+  </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; CENTRO DE REHABILITACION 2025 - SEMBRANDO FE</p>
+        </div>
+    </footer>
+    <script>
+  const images = [
+    "media/seccion2/2seccion.png",
+    "media/seccion2/img1.jpg",
+    "media/seccion2/img2.jpg",
+    "media/seccion2/img3.jpg",
+    "media/seccion2/img4.jpg"
+  ];
+  let current = 0;
+  const img = document.getElementById('carousel-img');
+
+  function showImg(idx) {
+    img.src = images[idx];
+  }
+
+  function prevImg() {
+    current = (current - 1 + images.length) % images.length;
+    showImg(current);
+  }
+
+  function nextImg() {
+    current = (current + 1) % images.length;
+    showImg(current);
+  }
+</script>
+</body>
+</html>
